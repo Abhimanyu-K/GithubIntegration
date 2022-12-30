@@ -8,9 +8,6 @@ WORKDIR /app
 COPY . . 
 
 RUN npm install
-RUN npm build
-
-RUN useradd -m myuser
-USER myuser
+RUN npm run build
 
 CMD [ "npm", "start" ]
